@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./borne-backend
+    container_name: borne-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./borne-backend/.env
+    volumes:
+      - ./borne-backend/uploads:/app/uploads
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./borne-frontend
+    container_name: borne-frontend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+    restart: unless-stopped

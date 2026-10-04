@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Import de Tailwind CSS v4 */
+@import "tailwindcss";
+
+:root {
+  --primary: #006747;
+  /* Moroccan Emerald */
+  --primary-hover: #004d35;
+  --secondary: #E2725B;
+  /* Terracotta */
+  --accent: #F4C430;
+  /* Saffron/Gold */
+  --bg-warm: #fffaf5;
+  --text-main: #1c1917;
+  --text-muted: #78716c;
+}
+
+/* Styles globaux supplémentaires */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-warm);
+  color: var(--text-main);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.zellige-pattern {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23006747' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h40v40H40V0zM0 40h40v40H0V40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 103, 71, 0.08);
+}
+
+.moroccan-font {
+  font-family: 'Playfair Display', serif;
+}
+
+input,
+button {
+  font-family: inherit;
+}
